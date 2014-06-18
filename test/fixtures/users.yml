@@ -3,3 +3,9 @@ lars:
    last_name: "Berg"
    email: "larsgbr@gmail.com"
    profile_name: "Larsuniverse"
+
+larstwo:
+   first_name: "Larz"
+   last_name: "Bergs"
+   email: "larsbr@gmail.com"
+   profile_name: "larzuniverse"

@@ -19,9 +19,10 @@ class ProfilesControllerTest < ActionController::TestCase
   end
 
   test "only shows the correct user's statuses" do
-  	get :show, id: users(:jason).profile_name
+  	get :show, id: users(:lars).profile_name
   	assigns(:statuses).each do |status|
-  		assert_equal users(:jason), status.user
+  		assert_equal users(:lars), status.user
   	end
+  end
 
 end

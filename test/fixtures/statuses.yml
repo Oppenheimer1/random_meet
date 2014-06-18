@@ -7,3 +7,7 @@ one:
 two:
   content: MyText
   user: lars
+
+three:
+  content: "Very interesting"
+  user: larstwo
