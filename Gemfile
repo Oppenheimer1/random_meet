@@ -29,6 +29,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'sass', '3.2.13'
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -45,3 +47,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+ruby '2.0.0'
