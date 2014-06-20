@@ -2,4 +2,4 @@
 
 link:http://randommeet.herokuapp.com
 
-== Getting Started
+== 
