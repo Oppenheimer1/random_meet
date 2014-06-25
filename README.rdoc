@@ -1,5 +1,5 @@
 ==== 
 
-link:randommeet.herokuapp.com
+https://randommeet.herokuapp.com
 
 ==== 
