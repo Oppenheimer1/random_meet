@@ -11,6 +11,7 @@
       <%= f.input :last_name, input_html: { class: 'input-xlarge' } %>
       <%= f.input :profile_name, input_html: { class: 'input-xlarge' } %>
       <%= f.input :email, input_html: { class: 'input-xlarge' } %>
+      <%= f.input :avatar, as: :file %> <%= bootstrap_paperclip_picture f, :avatar %>
       <%= f.input :password, input_html: { class: 'input-xlarge', autocomplete: 'off' } %>
       <%= f.input :password_confirmation, input_html: { class: 'input-xlarge', autocomplete: 'off' } %>
       <div class="form-actions">
