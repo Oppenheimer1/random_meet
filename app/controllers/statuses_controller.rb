@@ -1,6 +1,6 @@
 class StatusesController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
-
+  layout "statuses"
   rescue_from ActiveModel::MassAssignmentSecurity::Error, with: :render_permission_error
 
   # GET /statuses

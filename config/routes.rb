@@ -24,7 +24,10 @@ RandomMeet::Application.routes.draw do
 
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
-  root to: 'statuses#index'
+  root to: 'hsc#index'
+  match '/about',   to: 'hsc#about',   via: 'get'
+  
+
 
   scope ":profile_name" do
     resources :albums do
@@ -33,5 +36,7 @@ RandomMeet::Application.routes.draw do
   end
 
   get '/:id', to: 'profiles#show', as: 'profile'
+
+
 
 end

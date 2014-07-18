@@ -1,0 +1,2 @@
+module HscHelper
+end

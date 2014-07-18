@@ -6,6 +6,8 @@ class PicturesController < ApplicationController
   before_filter :ensure_proper_user, only: [:edit, :new, :create, :update, :destroy]
   before_filter :add_breadcrumbs
 
+  layout "statuses"
+  
   # GET /pictures
   # GET /pictures.json
   def index
