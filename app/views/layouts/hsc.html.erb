@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>High Speed Chess</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag  "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 
 </head>
@@ -52,19 +52,21 @@
     </header>
     <!-- /header -->
 
-        <!--Slider-->
+    <!--Slider-->
     <section id="slide-show">
      <div id="slider" class="sl-slider-wrapper">
 
-        <!--Slider Items-->    
+        <!--Slider Items--><h2>..........are you ready to play?</h2>
+        <%= image_tag "chessbackup.png" %>   
         <div class="sl-slider">
             <!--Slider Item1-->
             <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                 <div class="sl-slide-inner">
                     <div class="container">
-                        <img class="pull-right" <%= image_tag "chess1.png" %> alt="" />
+                        <img class="pull-right"><%= image_tag "chess1.png" %>
                         <h2>High Speed Chess</h2>
                         <h3 class="gap">The new way to play</h3>
+                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -74,9 +76,11 @@
             <div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
                 <div class="sl-slide-inner">
                     <div class="container">
-                        <img class="pull-right" <%= image_tag "chess2.png" %> alt="" />
+                        <img class="pull-right">
+                        <%= image_tag "chess2.png" %>
                         <h2>Play Anywhere Anytime with Anyone</h2>
                         <h3 class="gap">Someone wants to play Chess right now with you</h3>
+                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -86,9 +90,10 @@
             <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
                 <div class="sl-slide-inner">
                    <div class="container">
-                    <img class="pull-right" <%= image_tag "chess3.png" %> alt="" />
+                    <%= image_tag "chess3.png" %>
                     <h2>Compete or Just for Fun</h2>
                     <h3 class="gap">Choose the option that's best for you</h3>
+                    <a class="btn btn-large btn-transparent" href="#">Learn More</a>
                 </div>
             </div>
         </div>
