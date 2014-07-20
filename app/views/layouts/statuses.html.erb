@@ -16,7 +16,7 @@
 				<%= link_to "Random MeetUp", root_path, class: 'brand' %>
 				<% end %>
 				<ul class="nav">
-					<li><%= link_to "All Statuses", feed_path %></li>
+					<li><%= link_to "Current Players", feed_path %></li>
 					<% if user_signed_in? %>
 						<li id="activity-feed"><%= link_to "Activity Feed", activities_path %></li>
 					<% end %>

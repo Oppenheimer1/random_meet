@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Random MeetUp</title>
+  <title>High Speed Chess</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,14 +11,14 @@
         <div class="navbar-inner">
             <div class="container">
                 <% if user_signed_in? %>
-                <%= link_to "Random MeetUp", activities_path, class: 'brand' %>
+                <%= link_to "Currently Playing", activities_path, class: 'brand' %>
                 <% else %>
-                <%= link_to "Random MeetUp", root_path, class: 'brand' %>
+                <%= link_to "Currently Playing", root_path, class: 'brand' %>
                 <% end %>
                 <ul class="nav">
-                    <li><%= link_to "All Statuses", feed_path %></li>
+                    <li><%= link_to "Currently Playing", feed_path %></li>
                     <% if user_signed_in? %>
-                        <li id="activity-feed"><%= link_to "Activity Feed", activities_path %></li>
+                        <li id="activity-feed"><%= link_to "Currently Playing", activities_path %></li>
                     <% end %>
                 </ul>
                 <ul class="nav pull-right">
