@@ -1,5 +1,5 @@
 class Status < ActiveRecord::Base
-  attr_accessible :content, :document_attributes
+  attr_accessible :content, :document_attributes, :state, :city
   belongs_to :user
   belongs_to :document
 
@@ -9,4 +9,8 @@ class Status < ActiveRecord::Base
                       length: { minimum: 2 }
 
   validates :user_id, presence: true
+
+  validates :state, presence: true
+
+  validates :city, presence: true
 end

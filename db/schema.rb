@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140719005054) do
+ActiveRecord::Schema.define(:version => 20140722202407) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20140719005054) do
     t.integer  "user_id"
     t.integer  "document_id"
     t.string   "state"
+    t.string   "city"
   end
 
   add_index "statuses", ["user_id"], :name => "index_statuses_on_user_id"
