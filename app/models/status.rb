@@ -1,5 +1,5 @@
 class Status < ActiveRecord::Base
-  attr_accessible :content, :document_attributes, :state, :city, :avatar
+  attr_accessible :content, :document_attributes, :state, :city
   belongs_to :user
   belongs_to :document
 
@@ -14,5 +14,4 @@ class Status < ActiveRecord::Base
 
   validates :city, presence: true
 
-  validates :avatar, presence: true
 end
