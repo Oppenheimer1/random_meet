@@ -14,6 +14,10 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'aws-sdk'
+
+gem 'asset_sync'
+gem 'fog'
 
 group :production do
   gem 'thin'

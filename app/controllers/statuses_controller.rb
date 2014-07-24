@@ -7,6 +7,7 @@ class StatusesController < ApplicationController
   # GET /statuses.json
   def index
     @statuses = Status.order('created_at desc').all
+    @statuses = Status.paginate(:page => params[:page], :per_page => 5)
 
     respond_to do |format|
       format.html # index.html.erb
