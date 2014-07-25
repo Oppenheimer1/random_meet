@@ -18,14 +18,19 @@
 				<ul class="nav">
 					<li><%= link_to "HIGH SPEED CHESS", root_path %></li>
 					<li><%= link_to "Current Players", feed_path %></li>
+					<li ><%= search_form_for @search do |f| %>
+  <div id="searchbox">
+    <%= f.text_field :state_cont %>
+  </div></li>
+  <li><div id="submit"><%= f.submit "Search" %></div>
+<% end %></li>
+
 					<% if user_signed_in? %>
-						<li id="activity-feed"><%= link_to "Activity Feed", activities_path %></li>
+						
 					<% end %>
 				</ul>
 				<ul class="nav pull-right">
 					<% if user_signed_in? %>
-						<li><%= link_to 'Albums', albums_path(current_user) %></li>
-						<li><%= link_to 'Friends', user_friendships_path %></li>
 						<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
 						<li><%= link_to "Log Out", logout_path %></li>
 					<% else %>

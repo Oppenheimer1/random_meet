@@ -14,4 +14,5 @@ class Status < ActiveRecord::Base
 
   validates :city, presence: true
 
+
 end

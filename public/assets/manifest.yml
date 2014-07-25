@@ -7,6 +7,8 @@ ad3.png: ad3-679e82806034c84f9df0d5c7f8b7e6be.png
 ad3/index.png: ad3-679e82806034c84f9df0d5c7f8b7e6be.png
 ad4.png: ad4-652a44785293d6a272cdb5f538ca6edd.png
 ad4/index.png: ad4-652a44785293d6a272cdb5f538ca6edd.png
+board1.png: board1-62d74df466c247e2e9968558d9af3c2a.png
+board1/index.png: board1-62d74df466c247e2e9968558d9af3c2a.png
 chess1.png: chess1-41e4cf6b57a9ae974aa7a158b2c73505.png
 chess1/index.png: chess1-41e4cf6b57a9ae974aa7a158b2c73505.png
 chess2.png: chess2-a7074a666646aa04584b37236dbdc3a1.png
@@ -37,8 +39,8 @@ rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 application.js: application-30bd8fe184fd0bc221cc2f9bd392ba26.js
 application/index.js: application-30bd8fe184fd0bc221cc2f9bd392ba26.js
-application.css: application-c5b3e9c90e7749f8dbd434f568fe8dee.css
-application/index.css: application-c5b3e9c90e7749f8dbd434f568fe8dee.css
+application.css: application-ad9edb7c605b2c5cd6023ec37ac52184.css
+application/index.css: application-ad9edb7c605b2c5cd6023ec37ac52184.css
 jquery.min.map: jquery.min-388372ef65cc311f6a3df4a6ceac8d22.map
 jquery/index.min.map: jquery.min-388372ef65cc311f6a3df4a6ceac8d22.map
 fontawesome-webfont.eot: fontawesome-webfont-009f6d1f667cc42c25e712ab3429cbc7.eot
