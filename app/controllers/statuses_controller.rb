@@ -5,6 +5,8 @@ class StatusesController < ApplicationController
 
   # GET /statuses
   # GET /statuses.json
+
+  
   def index
       @search = Status.search(params[:q])
       @search.sorts = 'name asc' if @search.sorts.empty?

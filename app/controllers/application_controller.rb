@@ -1,5 +1,12 @@
 class ApplicationController < ActionController::Base
   
+
+	before_filter :set_search
+
+	def set_search
+		@search=Status.search(params[:q])
+	end
+
   protect_from_forgery
 
   rescue_from ActiveRecord::RecordNotFound, with: :render_404
