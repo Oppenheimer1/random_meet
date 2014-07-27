@@ -21,6 +21,8 @@ gem 'fog'
 
 gem 'ransack'
 
+gem 'font-awesome-rails'
+
 group :production do
   gem 'thin'
 end
