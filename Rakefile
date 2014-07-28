@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RandomMeet::Application.load_tasks
+HighSpeedChess::Application.load_tasks
