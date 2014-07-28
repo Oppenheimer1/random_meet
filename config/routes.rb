@@ -1,4 +1,4 @@
-RandomMeet::Application.routes.draw do
+HighSpeedChess::Application.routes.draw do
   resources :activities, only: [:index]
 
   as :user do
