@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require js-routes
+//= require twitter/bootstrap
 //= require_tree .
 
 window.loadedActivities = [];
