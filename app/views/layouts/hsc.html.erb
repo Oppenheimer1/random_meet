@@ -21,67 +21,58 @@
                 <a id="log" class="pull-left"><H1>HIGH SPEED CHESS</H1></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
+                      <!--  <li class="active"><a href="index.html">Home</a></li>
+                        <li><%= link_to "About Us", about_path%></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="career.html">Career</a></li>
+                                <li><a href="blog-item.html">Blog Single</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="registration.html">Registration</a></li>
+                                <li class="divider"></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms of Use</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blog</a></li> 
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li class="login">
+                            <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>
+                        </li>
+                    </ul>        
+                </div><!--/.nav-collapse -->
             </div>
         </div>
     </header>
     <!-- /header -->
 
-   <!--Slider-->
+    <!--Slider-->
     <section id="slide-show">
      <div id="slider" class="sl-slider-wrapper">
 
-        <!--Slider Items-->    
+        <!--Slider Items--><h2>..........are you ready to play?</h2>
+        <%= image_tag "chessbackup.png" %>   
         <div class="sl-slider">
-            <!--Slider Item1-->
-            <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-                <div class="sl-slide-inner">
-                    <div class="container">
-                        <%= image_tag "chess1.png", :class =>"pull-right"%> 
-                        <h2>High Speed Chess</h2>
-                        <h3 class="gap">The new way to play</h3>
-                    </div>
-                </div>
-            </div>
-            <!--/Slider Item1-->
-
-            <!--Slider Item2-->
-            <div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-                <div class="sl-slide-inner">
-                    <div class="container">
-                        <%= image_tag "chess2.png", :class =>"pull-right"%> 
-                        <h2>Play Anywhere Anytime with Anyone</h2>
-                        <h3 class="gap">Someone wants to play Chess right now with you</h3>
-                    </div>
-                </div>
-            </div>
-            <!--Slider Item2-->
-
-            <!--Slider Item3-->
-            <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-                <div class="sl-slide-inner">
-                   <div class="container">
-                    <%= image_tag "chess3.png", :class =>"pull-right"%>
-                    <h2>Compete or Just for Fun</h2>
-                    <h3 class="gap">Choose the option that's best for you</h3>
-                </div>
-            </div>
-        </div>
-        <!--Slider Item3-->
+           
 
     </div>
     <!--/Slider Items-->
 
     <!--Slider Next Prev button-->
-    <nav id="nav-arrows" class="nav-arrows">
-        <span class="nav-arrow-prev"><i class="icon-angle-left"></i></span>
-        <span class="nav-arrow-next"><i class="icon-angle-right"></i></span> 
-    </nav>
+
     <!--/Slider Next Prev button-->
 
 </div>
 <!-- /slider-wrapper -->           
 </section>
 <!--/Slider-->
+
 <section class="main-info">
     <div class="container">
         <div class="row-fluid">
@@ -308,9 +299,9 @@
                         <div class="row-fluid">
                             <ul class="thumbnails">
                                 <li class="span3"><%= link_to image_tag("partner1.png"), "http://www.orrinpridgen.com"%></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/client2.png"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/client3.png"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/client4.png"></a></li>
+                                <li class="span3">
+                                <li class="span3"><%= link_to image_tag("lb.png"), "http://www.larsbergportfolio.com"%></li>
+                                <li class="span3">
                             </ul>
                         </div>
                     </div>
@@ -378,7 +369,7 @@
 
             <!--Important Links-->
             <div id="tweets" class="span3">
-                <h4>OUR COMPANY</h4>
+                <!--<h4>OUR COMPANY</h4>
                 <div>
                     <ul class="arrow">
                         <li><a href="#">About Us</a></li>
@@ -389,12 +380,12 @@
                         <li><a href="#">We are hiring</a></li>
                         <li><a href="#">Clients</a></li>
                         <li><a href="#">Blog</a></li>
-                    </ul>
+                    </ul>-->
                 </div>  
             </div>
             <!--Important Links-->
 
-            <!--Archives-->
+            <!--Archives--><!--
             <div id="archives" class="span3">
                 <h4>ARCHIVES</h4>
                 <div>
@@ -407,11 +398,11 @@
                         <li><a href="#">July 2012 (1)</a></li>
                         <li><a href="#">June 2012 (31)</a></li>
                     </ul>
-                </div>
+                </div>-->
             </div>
             <!--End Archives-->
 
-            <div class="span3">
+            <div class="span3"><!--
                 <h4>FLICKR GALLERY</h4>
                 <div class="row-fluid first">
                     <ul class="thumbnails">
@@ -446,7 +437,7 @@
                 </ul>
             </div>
 
-        </div>
+        </div> -->
 
     </div>
     <!--/row-fluid-->
@@ -467,7 +458,7 @@
 
             <div class="span6">
                 <ul class="social pull-right">
-                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                 <!--   <li><a href="#"><i class="icon-facebook"></i></a></li>
                     <li><a href="#"><i class="icon-twitter"></i></a></li>
                     <li><a href="#"><i class="icon-pinterest"></i></a></li>
                     <li><a href="#"><i class="icon-linkedin"></i></a></li>
@@ -477,7 +468,7 @@
                     <li><a href="#"><i class="icon-dribbble"></i></a></li>
                     <li><a href="#"><i class="icon-rss"></i></a></li>
                     <li><a href="#"><i class="icon-github-alt"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>                   
+                    <li><a href="#"><i class="icon-instagram"></i></a></li>   -->                
                 </ul>
             </div>
 
