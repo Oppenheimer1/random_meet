@@ -1,0 +1,1 @@
+(function(){$(function(){return $(".status").hover(function(){return $(this).toggleClass("hover")})})}).call(this);
