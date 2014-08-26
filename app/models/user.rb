@@ -10,10 +10,10 @@ class User < ActiveRecord::Base
                   :first_name, :last_name, :profile_name, :avatar
   
   validates :first_name, presence: true, length: { minimum: 2 },exclusion: { in: %w(Shit Piss Fuck Cunt Cocksucker Motherfucker Tits Ass Asshole Cock Bullshit Clit Cum Chink Coon Coochie Dago Dick Dyke Fag Faggot Goddamn Gook Heeb Jizz Kike Mofo Nigger Poonani Poontang Prick Pussy Snatch Spic Honky Skeet Taint Titties Twat Wetback Wigger Wop Pissed),
-    message: "%{value} cannot be used as a First Name." }
+    message: "%{value} cannot be used as a First Name." }, length: { in: 1..20 }
 
   validates :last_name, presence: true, length: { minimum: 2 },exclusion: { in: %w(Shit Piss Fuck Cunt Cocksucker Motherfucker Tits Ass Asshole Cock Bullshit Clit Cum Chink Coon Coochie Dago Dick Dyke Fag Faggot Goddamn Gook Heeb Jizz Kike Mofo Nigger Poonani Poontang Prick Pussy Snatch Spic Honky Skeet Taint Titties Twat Wetback Wigger Wop Pissed),
-    message: "%{value} cannot be used as a Last Name." }
+    message: "%{value} cannot be used as a Last Name." }, length: { in: 1..20 }
 
   validates :password, length: { in: 6..20 }
 
@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
                              with: /^[a-zA-Z0-9_-]+$/,
                              message: 'Must be formatted correctly.'
                            },exclusion: { in: %w(Shit Piss Fuck Cunt Cocksucker Motherfucker Tits Ass Asshole Cock Bullshit Clit Cum Chink Coon Coochie Dago Dick Dyke Fag Faggot Goddamn Gook Heeb Jizz Kike Mofo Nigger Poonani Poontang Prick Pussy Snatch Spic Honky Skeet Taint Titties Twat Wetback Wigger Wop),
-    message: "%{value} cannot be used as a Profile Name." }
+    message: "%{value} cannot be used as a Profile Name." }, length: { in: 1..20 }
   has_many :activities
   has_many :albums
   has_many :pictures

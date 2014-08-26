@@ -15,6 +15,8 @@ gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'aws-sdk'
+gem 'metamagic'
+
 
 gem 'asset_sync'
 gem 'fog'
