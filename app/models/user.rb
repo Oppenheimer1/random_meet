@@ -57,7 +57,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, styles: {
     large: "800x800>", medium: "300x200>", small: "260x180>", thumb: "80x80#"
   },
-                :default_url => "************",
+                :default_url => "s3_domain_url",
                 :storage => :s3,
                 :bucket => 'hschsc',
                 :s3_credentials => {
