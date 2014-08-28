@@ -56,7 +56,16 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar, styles: {
     large: "800x800>", medium: "300x200>", small: "260x180>", thumb: "80x80#"
-  }
+  },
+                :default_url => "************",
+                :storage => :s3,
+                :bucket => 'hschsc',
+                :s3_credentials => {
+      :access_key_id => 'AKIAIVQYSYGEQ22PQ4YA',
+      :secret_access_key => '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'
+    }
+
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   def self.get_gravatars
     all.each do |user|
