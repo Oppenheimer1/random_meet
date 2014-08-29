@@ -43,6 +43,10 @@ application.js: application-086169dc21bcb71da164ab07c8c59924.js
 application/index.js: application-086169dc21bcb71da164ab07c8c59924.js
 application.css: application-5a91e2edd7b588e029538c465151b08b.css
 application/index.css: application-5a91e2edd7b588e029538c465151b08b.css
+loading.gif: loading-b7ff30d20adcf2b850f420d17048930c.gif
+loading/index.gif: loading-b7ff30d20adcf2b850f420d17048930c.gif
+progressbar.gif: progressbar-bc538af0ba6ff3d792217a96651cd58a.gif
+progressbar/index.gif: progressbar-bc538af0ba6ff3d792217a96651cd58a.gif
 jquery.min.map: jquery.min-388372ef65cc311f6a3df4a6ceac8d22.map
 jquery/index.min.map: jquery.min-388372ef65cc311f6a3df4a6ceac8d22.map
 FontAwesome.otf: FontAwesome-e3a416fb7b056330f289a16610b1ba06.otf

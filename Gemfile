@@ -53,5 +53,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'jquery-fileupload-rails'
+
 ruby '2.0.0'
 
