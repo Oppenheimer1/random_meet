@@ -558,7 +558,7 @@ border-radius:3px;
 -webkit-box-shadow:none;
 -moz-box-shadow:none;
 box-shadow:none;
-min-height:50px;
+min-height:30px;
 border:3px solid #ededed;
 padding:0 15px;
 }
@@ -834,4 +834,16 @@ color:#2dcc70;
 
 .blog .blog-item .tag,.blog .blog-item .avatar {
 margin-top:5px;
+}
+
+.high_speed{
+	font-family:"Fjalla One";
+	font-weight:400;
+	font-size:24px;
+	color:2dcc70
+	}
+
+.chess_time{
+	width:25em;
+	height:14em;
 }

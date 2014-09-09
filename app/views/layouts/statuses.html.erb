@@ -18,15 +18,14 @@
 				<%= link_to "Random MeetUp", root_path, class: 'brand' %>
 				<% end %>
 				<ul class="nav">
-					<li><%= link_to "HIGH SPEED CHESS", root_path %></li>
-					<li><%= link_to "Current Players", feed_path %></li>
-					<li ><%= search_form_for @search do |f| %>
-  <div id="searchbox">
-    <%= f.text_field :state_or_city_or_content_cont %>
-  </div></li>
-  <li><div id="submit"><%= f.submit "Search" %></div>
-<% end %></li>
 
+					<li class="navbar-search pull-left"><%= link_to "HIGH SPEED CHESS", root_path, class: "high_speed"%></li>
+					<li class="navbar-search pull-left"><%= link_to "Current Players", feed_path %></li>
+					<li class="navbar-search pull-left" class="search-query"><%= search_form_for @search do |f| %>
+  <div id="searchbox class=”search-query">
+    <%= f.text_field :state_or_city_or_content_cont %>
+  </div></li><li class="navbar-search pull-left"><div id="submit"><%= f.submit "Search" %></li>
+<% end %>
 					<% if user_signed_in? %>
 						
 					<% end %>

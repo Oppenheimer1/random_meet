@@ -15,46 +15,40 @@
 
 <body>
     <!--Header-->
-    <header class="navbar navbar-fixed-top">
+        <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a id="log" class="pull-left"><H1 class="high">HIGH SPEED CHESS</H1></a>
-                <div class="nav-collapse collapse pull-right">
-                    <ul class="nav">
-                      <!--  <li class="active"><a href="index.html">Home</a></li>
-                        <li><%= link_to "About Us", about_path%></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="career.html">Career</a></li>
-                                <li><a href="blog-item.html">Blog Single</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="typography.html">Typography</a></li>
-                                <li><a href="registration.html">Registration</a></li>
-                                <li class="divider"></li>
-                                <li><a href="privacy.html">Privacy Policy</a></li>
-                                <li><a href="terms.html">Terms of Use</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blog</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li class="login">
-                            <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>
-                        </li>
-                    </ul>        
-                </div><!--/.nav-collapse -->
+                <% if user_signed_in? %>
+                <%= link_to "Random MeetUp", activities_path, class: 'brand' %>
+                <% else %>
+                <%= link_to "Random MeetUp", root_path, class: 'brand' %>
+                <% end %>
+                <ul class="nav">
+                    <li class="navbar-search pull-left"><%= link_to "HIGH SPEED CHESS", root_path, class: "high_speed"%></li>
+                    <li class="navbar-search pull-left"><%= link_to "Current Players", feed_path %></li>
+                    <li class="navbar-search pull-left" class="search-query"><%= search_form_for @search do |f| %>
+  <div id="searchbox class=”search-query">
+    <%= f.text_field :state_or_city_or_content_cont %>
+  </div></li><li class="navbar-search pull-left"><div id="submit"><%= f.submit "Search" %></li>
+<% end %>
+
+
+                    <% if user_signed_in? %>
+                        
+                    <% end %>
+                </ul>
+                <ul class="nav pull-right">
+                    <% if user_signed_in? %>
+                        <li><%= link_to current_user.full_name, edit_user_registration_path %></li>
+                        <li><%= link_to "Log Out", logout_path %></li>
+                    <% else %>
+                        <li><%= link_to "Register", register_path %></li>
+                        <li><%= link_to "Log in", new_user_session_path %></li>
+                    <% end %>
+                </ul>
             </div>
         </div>
-    </header>
+    </div>
     <!-- /header -->
 
        <!--Slider-->
@@ -188,8 +182,8 @@
                         <i class="fa fa-clock-o icon-medium"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=joq7kqfcoc">5 seconds</a></h4>
-                        <p>Ok, so you want to play a little bit slower because the 5, 10 and 25 second speed games were too quick for you to handle. That's ok, not everyone can play like the pros but even this game is fast. You can stand up, yawn, drink some coffee, even text a friend but you have to make your move because if you don't before that minute's up your opponent can quickly take the lead.</p>
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=unz4v9qh9o">5 seconds 2 vs 2</a></h4>
+                        <p>You and your team members square off to face the challengers. Will you win or will you lose, it's a fast paced game of timing and strategy.</p>
                     </div>
                 </div>
             </div>            
@@ -200,8 +194,8 @@
                         <i class="fa fa-clock-o icon-medium"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=67whhwyfrz">10 seconds</a></h4>
-                        <p>Alright, so you got some time to spend and aren't in a super rush and 2 minutes is the best way for you to play. You could grap a cup of coffee, call a friend, do some jumping jacks and blog for a moment but don't forget to make your move because your opponent is going to take the lead if you don't.</p>
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=nb6nf2ktrt">5 seconds 3 vs 3</a></h4>
+                        <p>A little more complicated because there's 3 of you and each of you has to work together to win. One small mistake and the other team can take the lead.</p>
                     </div>
                 </div>
             </div>            
@@ -212,8 +206,83 @@
                         <i class="fa fa-clock-o icon-medium"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=9v8z2ri5z1">25 seconds</a></h4>
-                        <p>Not in a super rush and you've got some time to kill, but still you can't sit around for 30 minutes to make a move. You've got enough time to think about your next move and the move after that, check out what's going on in the news and write a short poem and then make your move but watch the clock because at 5 minutes on the dot if you haven't made your move your opponent is up and you could lose out.</p>
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=10y3149ed7">5 seconds 4 vs 4</a></h4>
+                        <p>Can you operate in a real team setting. There's 4 of you and not much time to decide what to do next. If you can work together and think strategically fast this game is for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="fa fa-clock-o icon-medium"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=cy0i84htz3">10 seconds 2 vs 2</a></h4>
+                        <p>You and your team members square off to face the challengers. A little easier then 5 seconds but still there's not much time on the clock to make things happen. It's a team game and if you haven't made a move by the end of ten seconds you opponent takes over.</p>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="fa fa-clock-o icon-medium"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=zt8ofwfsr">10 seconds 3 vs 3</a></h4>
+                        <p>You have to make a move and there's 3 of you. 10 seconds a turn, not much time. Before you know it you're out of time and your opponents are up. Think fast and collaborate because there's only one team that wins.</p>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="fa fa-clock-o icon-medium"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=66tamgmnuu">10 seconds 4 vs 4</a></h4>
+                        <p>This game will help you build your team building skills. There's four of you and not much time on the clock. If you work as a team and think strategically you're going to win but remember your opponents are thinking the same thing. You'll have to out smart them and work with everyone else on your team to make things happen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="fa fa-clock-o icon-medium"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=ozam9tx7dw">25 seconds 2 vs 2</a></h4>
+                        <p>Lot's of time on the clock compared to the 5 and 10 second games but still not a tremendous amount of time. Don't forget you have a teammate and if you're going to win it's going to be a team effort. If you work together and think strategically the game is yours to win.
+                    </div>
+                </div>
+            </div>            
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="fa fa-clock-o icon-medium"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=k1yo22o2i1">25 seconds 3 vs 3</a></h4>
+                        <p>There's 3 of you and lot's of time to wait until your next turn. Don't lose track of what's happens from you last move because by the time you go again 5 other people will have made decisions on the outcome of the game. Remember think team and you can take the win from your opponent.</p>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="fa fa-clock-o icon-medium"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="http://www.online-stopwatch.com/full-screen-interval-timer/?c=8yxyw7nuj">25 seconds 4 vs 4</a></h4>
+                        <p>There's a lot of you and lots of time since you made your last move. Pay attention, work together as a team and think strategically and you and your team members can win. Be careful not to look away from the board for too long because the outcome can change just like that. There's enough time for you to get a coffee in between moves but don't forget about your teammates and the     strategy your opponents are coming up with. Before you know it it's your turn again and the fate of your team could be in your hands.</p>
                     </div>
                 </div>
             </div>
@@ -234,7 +303,7 @@
             <!--Item 1-->
             <li>
                 <div class="preview">
-                    <%= image_tag "chess5.png" %>
+                    <%= image_tag "chess5.png", :class => 'chess_time'%>
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -256,7 +325,7 @@
             <!--Item 2-->
             <li>
                 <div class="preview">
-                    <%= image_tag "chess6.png" %>
+                    <%= image_tag "chess6.png", :class => 'chess_time'%>
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -278,7 +347,7 @@
             <!--Item 3-->
             <li>
                 <div class="preview">
-                    <%= image_tag "chess7.png" %>
+                    <%= image_tag "chess7.png", :class => 'chess_time'%>
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -299,8 +368,8 @@
 
             <!--Item 4-->
             <li>
-                <div class="preview">
-                    <%= image_tag "chess8.png" %>
+                <div class="preview" class="chess_time">
+                    <%= image_tag "chess8.png", :class => 'chess_time'%>
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -601,3 +670,4 @@ $(function() {
 <!-- /SL Slider -->
 </body>
 </html>
+
